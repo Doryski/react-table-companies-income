@@ -45,7 +45,8 @@ const CheveronLink = styled(Link)`
 // special style for Links with double cheveron
 const EdgeLink = styled(Link)`
 	display: flex;
-	padding: 8px ${props => props.theme.padding.medium};
+	padding: ${props => props.theme.padding.small}
+		${props => props.theme.padding.medium};
 	& svg {
 		margin: 0 -0.4em;
 	}

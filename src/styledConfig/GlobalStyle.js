@@ -100,6 +100,7 @@ const GlobalStyle = createGlobalStyle`
             content: attr(label);
             font-weight: bold;
             width: 35%;
+            margin-right: ${props => props.theme.padding.small};
         }
         thead th, tbody td {
             &:nth-child(4), :nth-child(5), :nth-child(6) {
