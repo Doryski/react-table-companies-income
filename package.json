@@ -1,0 +1,33 @@
+{
+    "name": "react-table-companies-income",
+    "version": "1.0.0",
+    "description": "React filterable, sortable, paginated table",
+    "main": "index.js",
+    "homepage": "https://doryski.github.io/react-table-companies-income/",
+    "scripts": {
+        "deploy": "gh-pages -d build",
+        "start": "webpack-dev-server --mode development --open --hot",
+        "build": "webpack --mode production"
+    },
+    "author": "Doryski",
+    "license": "ISC",
+    "dependencies": {
+        "@styled-icons/zondicons": "^10.0.0",
+        "gh-pages": "^2.2.0",
+        "moment": "^2.24.0",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1",
+        "regenerator-runtime": "^0.13.5",
+        "styled-components": "^5.0.1"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.9.0",
+        "@babel/preset-env": "^7.9.0",
+        "@babel/preset-react": "^7.9.4",
+        "babel-loader": "^8.1.0",
+        "html-webpack-plugin": "^4.0.3",
+        "webpack": "^4.42.1",
+        "webpack-cli": "^3.3.11",
+        "webpack-dev-server": "^3.10.3"
+    }
+}
