@@ -5,7 +5,8 @@
 /tests
 
 # production
-/build
+/dist
 
 # links
 /src/links
+
