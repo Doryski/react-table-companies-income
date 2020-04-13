@@ -6,7 +6,6 @@ import { CheveronRight, CheveronLeft } from '@styled-icons/zondicons'
 const List = styled.ul`
 	display: flex;
 	justify-content: center;
-	margin-bottom: ${props => props.theme.padding.large};
 `
 const Link = styled.a`
 	display: block;

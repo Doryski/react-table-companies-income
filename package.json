@@ -5,7 +5,7 @@
     "main": "index.js",
     "homepage": "https://doryski.github.io/react-table-companies-income/",
     "scripts": {
-        "deploy": "gh-pages -d build",
+        "deploy": "gh-pages -d dist",
         "start": "webpack-dev-server --mode development --open --hot",
         "build": "webpack --mode production"
     },

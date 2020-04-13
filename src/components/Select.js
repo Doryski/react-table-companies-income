@@ -6,7 +6,6 @@ const SelectLabel = styled.label`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-top: ${props => props.theme.padding.large};
 `
 
 const Select = () => {

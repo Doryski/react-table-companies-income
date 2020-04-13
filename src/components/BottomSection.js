@@ -6,6 +6,7 @@ import Pagination from './Pagination'
 const Wrapper = styled.section`
 	display: flex;
 	justify-content: space-between;
+	margin-bottom: ${props => props.theme.padding.large};
 `
 
 const BottomSection = () => {

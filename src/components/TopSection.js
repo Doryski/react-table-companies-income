@@ -6,11 +6,11 @@ import Select from './Select'
 const Wrapper = styled.section`
 	display: flex;
 	justify-content: space-between;
+	margin-top: ${props => props.theme.padding.large};
 `
 
 const SearchLabel = styled.label`
 	display: flex;
-	margin-top: ${props => props.theme.padding.large};
 `
 const Search = styled.span`
 	margin: auto ${props => props.theme.padding.medium} auto 0;
