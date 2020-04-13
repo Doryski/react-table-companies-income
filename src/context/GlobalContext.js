@@ -103,12 +103,22 @@ export const GlobalContextProvider = ({ children }) => {
 
 	let filteredData = sortedData.filter(
 		company =>
-			company.name.toLowerCase().includes(search) ||
-			company.city.toLowerCase().includes(search) ||
-			company.id.toString().includes(search) ||
-			company.avgIncome.toString().includes(search) ||
-			company.totalIncome.toString().includes(search) ||
-			company.lastMonthIncome.toString().includes(search)
+			company.name
+				.toLowerCase()
+				.includes(search.toLowerCase()) ||
+			company.city
+				.toLowerCase()
+				.includes(search.toLowerCase()) ||
+			company.id.toString().includes(search.toLowerCase()) ||
+			company.avgIncome
+				.toString()
+				.includes(search.toLowerCase()) ||
+			company.totalIncome
+				.toString()
+				.includes(search.toLowerCase()) ||
+			company.lastMonthIncome
+				.toString()
+				.includes(search.toLowerCase())
 	)
 	// end filtering
 

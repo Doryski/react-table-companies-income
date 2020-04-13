@@ -11,6 +11,10 @@ const TableCaption = styled.caption`
 	}
 `
 
+const DirSelect = styled.select`
+	margin-top: 0.1em;
+`
+
 const TableSortMobile = () => {
 	const {
 		handleColumnHeaderClick,
@@ -37,7 +41,7 @@ const TableSortMobile = () => {
 				</option>
 			</select>
 			{/* select sort order */}
-			<select
+			<DirSelect
 				value={sortDirection}
 				onChange={e =>
 					e.target.value === 'asc'
@@ -47,7 +51,7 @@ const TableSortMobile = () => {
 			>
 				<option value='asc'>ascending</option>
 				<option value='desc'>descending</option>
-			</select>
+			</DirSelect>
 		</TableCaption>
 	)
 }

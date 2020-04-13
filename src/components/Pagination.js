@@ -6,6 +6,10 @@ import { CheveronRight, CheveronLeft } from '@styled-icons/zondicons'
 const List = styled.ul`
 	display: flex;
 	justify-content: center;
+
+	@media only screen and (max-width: 690px) {
+		margin-top: ${props => props.theme.padding.small};
+	}
 `
 const Link = styled.a`
 	display: block;
@@ -32,11 +36,17 @@ const Link = styled.a`
 				: props.theme.colors.black};
 	}
 `
+const CheveronLink = styled(Link)`
+	display: flex;
+	padding: ${props => props.theme.padding.small}
+		${props => props.theme.padding.small};
+`
 
 // special style for Links with double cheveron
 const EdgeLink = styled(Link)`
 	display: flex;
-	padding: 0.53em ${props => props.theme.padding.large};
+	padding: ${props => props.theme.padding.small}
+		${props => props.theme.padding.medium};
 	& svg {
 		margin: 0 -0.4em;
 	}
@@ -61,6 +71,7 @@ const Pagination = () => {
 		pageNums.push(i)
 	}
 	const lastPage = pageNums.length
+	const cheveronSize = 22
 
 	return (
 		<List>
@@ -71,21 +82,21 @@ const Pagination = () => {
 					href='#'
 					onClick={() => goToPage(1)}
 				>
-					<CheveronLeft size='20' />
-					<CheveronLeft size='20' />
+					<CheveronLeft size={cheveronSize} />
+					<CheveronLeft size={cheveronSize} />
 				</EdgeLink>
 			</li>
 			{/* link to previous page */}
 			<li>
-				<Link
+				<CheveronLink
 					disabled={currentPage === 1}
 					href='#'
 					onClick={() =>
 						currentPage !== 1 && goToPage(currentPage - 1)
 					}
 				>
-					<CheveronLeft size='20' />
-				</Link>
+					<CheveronLeft size={cheveronSize} />
+				</CheveronLink>
 			</li>
 			{/* links to pages based on number */}
 			{currentPage === 1
@@ -117,7 +128,7 @@ const Pagination = () => {
 						))}
 			{/* link to next page */}
 			<li>
-				<Link
+				<CheveronLink
 					href='#'
 					disabled={
 						currentPage === lastPage ||
@@ -128,8 +139,8 @@ const Pagination = () => {
 						goToPage(currentPage + 1)
 					}
 				>
-					<CheveronRight size='20' />
-				</Link>
+					<CheveronRight size={cheveronSize} />
+				</CheveronLink>
 			</li>
 			{/* link to last page */}
 			<li>
@@ -141,8 +152,8 @@ const Pagination = () => {
 					}
 					onClick={() => goToPage(lastPage)}
 				>
-					<CheveronRight size='20' />
-					<CheveronRight size='20' />
+					<CheveronRight size={cheveronSize} />
+					<CheveronRight size={cheveronSize} />
 				</EdgeLink>
 			</li>
 		</List>

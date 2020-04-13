@@ -7,6 +7,11 @@ const Wrapper = styled.section`
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: ${props => props.theme.padding.large};
+
+	@media only screen and (max-width: 690px) {
+		flex-direction: column;
+		text-align: center;
+	}
 `
 
 const BottomSection = () => {

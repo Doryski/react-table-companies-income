@@ -99,8 +99,7 @@ const GlobalStyle = createGlobalStyle`
         table td::before {
             content: attr(label);
             font-weight: bold;
-            width: 50%;
-            min-width: 120px;
+            width: 35%;
         }
         thead th, tbody td {
             &:nth-child(4), :nth-child(5), :nth-child(6) {

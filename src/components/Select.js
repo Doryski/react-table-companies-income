@@ -25,7 +25,6 @@ const Select = () => {
 				<option value='15'>15</option>
 				<option value='25'>25</option>
 			</select>
-			entries
 		</SelectLabel>
 	)
 }
